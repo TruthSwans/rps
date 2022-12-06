@@ -11,3 +11,5 @@ function getComputerChoice (){
 }
 
 console.log(getComputerChoice());
+
+document.getElementById("Computer").innerHTML = getComputerChoice();
