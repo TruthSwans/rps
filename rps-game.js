@@ -5,11 +5,11 @@ let draws = 0
 let rounds = 0
 //Declare variable for the Computer selection using the getComputerChoice function//
 let computerSelection = getComputerChoice()
-//Prompt the Player to choose rock, paper, or scissors. Converts to lowercase.//
-let playerSelection = prompt("Rock, Paper, or Scissors?", "").toLowerCase();
+//Prompt the Player to choose hunter, titan, or warlock. Converts to lowercase.//
+let playerSelection = prompt("Hunter, Titan, or Warlock?", "").toLowerCase();
 //Declare function to have the Computer's choice randomly select one of the options//
 function getComputerChoice() {
-    const choices = [`rock`, `paper`, `scissors`]
+    const choices = [`hunter`, `titan`, `warlock`]
     let selection = choices[Math.floor(Math.random()* choices.length)]
     return selection
   }
@@ -34,20 +34,20 @@ function getComputerChoice() {
 //Declare function to play a round of Rock, Paper, Scissors//
 function playRound(playerSelection, computerSelection) {
     //After each round, prompt the Player to choose again. Return +1 to winner of each round//
-    if (playerSelection === `rock` && computerSelection === `paper`) {
-        return computerScore++ && prompt("Rock, Paper, or Scissors?", "")
-    } else if (playerSelection === `rock` && computerSelection === `scissors`) {
-        return playerScore++ && prompt("Rock, Paper, or Scissors?", "")
-    } else if (playerSelection === `paper` && computerSelection === `scissors`) {
-        return computerScore++ && prompt("Rock, Paper, or Scissors?", "")
-    } else if (playerSelection === `paper` && computerSelection === `rock`) {
-        return playerScore++ && prompt("Rock, Paper, or Scissors?", "")
-    } else if (playerSelection === `scissors` && computerSelection === `paper`) {
-        return playerScore++ && prompt("Rock, Paper, or Scissors?", "")
-    } else if (playerSelection === `scissors` && computerSelection === `rock`) {
-        return computerScore++ && prompt("Rock, Paper, or Scissors?", "")
+    if (playerSelection === `hunter` && computerSelection === `titan`) {
+        return computerScore++ && prompt("hunter, titan, or warlock?", "")
+    } else if (playerSelection === `hunter` && computerSelection === `warlock`) {
+        return playerScore++ && prompt("hunter, titan, or warlock?", "")
+    } else if (playerSelection === `titan` && computerSelection === `warlock`) {
+        return computerScore++ && prompt("hunter, titan, or warlock?", "")
+    } else if (playerSelection === `titan` && computerSelection === `hunter`) {
+        return playerScore++ && prompt("hunter, titan, or warlock?", "")
+    } else if (playerSelection === `warlock` && computerSelection === `titan`) {
+        return playerScore++ && prompt("hunter, titan, or warlock?", "")
+    } else if (playerSelection === `warlock` && computerSelection === `titan`) {
+        return computerScore++ && prompt("hunter, titan, or warlock?", "")
     } else if (playerSelection === computerSelection) {
-        return draws++ && prompt("Rock, Paper, or Scissors?", "")
+        return draws++ && prompt("hunter, titan, or warlock?", "")
     } else{
     }
 }
