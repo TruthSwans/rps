@@ -5,15 +5,15 @@ let draws = 0
 let rounds = 0
 //Declare variable for the Computer selection using the getComputerChoice function//
 let computerSelection = getComputerChoice()
-//Prompt the Player to choose rock, paper, or scissors//
-let playerSelection = prompt("Rock, Paper, or Scissors?", "")
+//Prompt the Player to choose rock, paper, or scissors. Converts to lowercase.//
+let playerSelection = prompt("Rock, Paper, or Scissors?", "").toLowerCase();
 //Declare function to have the Computer's choice randomly select one of the options//
 function getComputerChoice() {
     const choices = [`rock`, `paper`, `scissors`]
     let selection = choices[Math.floor(Math.random()* choices.length)]
     return selection
   }
-//Declare a function called game to play until someone reaches 5 wins or ends in a tie//
+    //Declare a function called game to play until someone reaches 5 wins or ends in a tie//
   function game() {
     //Create loop to play 5 rounds. Log the score after each round//
     for (let i = 0; rounds < 5; i++) {
@@ -48,9 +48,9 @@ function playRound(playerSelection, computerSelection) {
         return computerScore++ && prompt("Rock, Paper, or Scissors?", "")
     } else if (playerSelection === computerSelection) {
         return draws++ && prompt("Rock, Paper, or Scissors?", "")
-    }     
+    } else{
+    }
 }
-
 console.log(game())
 
 console.log(playRound(playerSelection, computerSelection));
